@@ -18,7 +18,7 @@
         <table>
             <thead>
                 <tr> 
-                    <tr>CATEGORIA</tr> 
+                    <th colspan="2">CATEGORIAS</th> 
                 </tr>
             </thead>
             <tbody>
@@ -47,26 +47,27 @@
                     <td>Obesidade grau III</td>
                 </tr>
             </tbody>
+      
             
         </table>
        </section>
        <section class="calculadora">
            <form action="">
            <div class="campo">
-               <label>Nome</label>
+               <label>Nome:</label>
                <input type="text">
            </div>
-           <div class="campo">
-            <label>Altura</label>
+           <div class="campo unidade" data-unidade="metros">
+            <label>Altura:</label>
             <input type="text">
         </div>
-        <div class="campo">
-            <label>Texto</label>
+        <div class="campo unidade" data-unidade="kilos">
+            <label>Peso:</label>
             <input type="text">
         </div>
         <button type="button">CALCULAR</button>
 
-        <div class="resultado" id="resultado"></div>
+        <div class="resultado" id="resultado">Texto para teste</div>
         </form>
        </section>
     </main>
