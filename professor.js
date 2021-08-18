@@ -45,7 +45,13 @@ function exibirResultado() {
      }
 }
 
+function capturarEnter(event) {
+    if (event.key == "Enter") {
+        exibirResultado()
+    }
+}
 
 
 //eventos
 document.getElementById('calcular').addEventListener('click', exibirResultado)
+document.querySelector('form').addEventListener('keypress', capturarEnter)
