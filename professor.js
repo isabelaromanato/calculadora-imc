@@ -28,10 +28,10 @@ function camposValidos () {
 }
 function exibirResultado() {
 
-    const resultado = document.getElementById('resultado');
-    const nome = document.getElementById('nome').value;
-    const peso = parseFloat(document.getElementById('peso').value.replace(',' , '.'));
-    const altura = parseFloat(document.getElementById('altura').value.replace(',' , '.'));
+    const resultado = document.getElementById('resultado')
+    const nome = document.getElementById('nome').value
+    const peso = parseFloat(document.getElementById('peso').value.replace(',' , '.'))
+    const altura = parseFloat(document.getElementById('altura').value.replace(',' , '.'))
     
 
     if (camposValidos()) {
@@ -39,7 +39,7 @@ function exibirResultado() {
     const classificacao = classificar(imc)
 
 
-        resultado.textContent = `${nome} seu IMC é ${imc.replace('.' , ',')} e você está ${classificacao}`
+    resultado.textContent = `${nome} seu IMC é ${imc.toString().replace('.' , ',')} e você está ${classificacao}`
      }else {
          resultado.textContent = 'Preencha todos os campos!'
      }
