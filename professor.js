@@ -45,6 +45,7 @@ function exibirResultado() {
      }
 }
 
+//capturando o Enter
 function capturarEnter(event) {
     if (event.key == "Enter") {
         exibirResultado()
