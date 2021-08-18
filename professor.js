@@ -1,3 +1,5 @@
+const formulario = document.getElementById("formulario")
+
 function calcularImc(peso, altura) {
     return (peso/ (altura ** 2).toFixed(1))
 }
@@ -9,7 +11,8 @@ function classificar(imc) {
     if (imc < 18.5){
         classificacao = 'abaixo do peso. Alimente-se melhor!';
     }else if (imc < 25) {
-        classificacao = 'com o peso ideal pra você. Maravilha!';
+        (classificacao = 'com o peso ideal pra você.<span class= "green">Parabéns!</span>')
+      
     }else if (imc < 30){
         classificacao = 'levemente acima do peso. Atenção!';
     }else if (imc < 35){
@@ -17,7 +20,8 @@ function classificar(imc) {
     }else if (imc < 40){
         classificacao = 'com obesidade grau II. Se cuide!';
     }else {
-        classificacao = 'com obesidade grau III. Cuidado!!!';
+        (classificacao = 'com obesidade grau III. <span class="red"> Cuidado!!!</span>')
+        resultado.classList.add('red');
     }
 
     return classificacao
@@ -39,7 +43,7 @@ function exibirResultado() {
     const classificacao = classificar(imc)
 
 
-    resultado.textContent = `${nome} seu IMC é ${imc.toString().replace('.' , ',')} e você está ${classificacao}`
+    resultado.innerHTML = `${nome} seu IMC é ${imc.toString().replace('.' , ',')} e você está ${classificacao}`
      }else {
          resultado.textContent = 'Preencha todos os campos!'
      }
